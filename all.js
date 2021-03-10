@@ -201,19 +201,5 @@ window.onload = function () {
         document.querySelector('.btn-circle-top').innerHTML = ' <i class="fas fa-paint-brush"></i>';
     })
 
-    /*   window.onresize = function () {
-          painting.SaveHistory();
-          painting.canvas.height = window.innerHeight;
-          painting.canvas.width = window.innerWidth;
-          let canvasImg = new Image();
-          canvasImg.src = painting.historyArr[painting.step];
-          canvasImg.addEventListener('load', e => {
-              painting.clearAll();
-              painting.canvas.height = window.innerHeight;
-              painting.canvas.width = window.innerWidth;
-              painting.ctx.drawImage(canvasImg, 0, 0, painting.canvas.width, painting.canvas.height);
-  
-          })
-      } */
 }
 
