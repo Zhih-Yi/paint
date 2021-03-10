@@ -1,0 +1,163 @@
+@charset "UTF-8";
+* {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background-color: #e8e8e8;
+  min-height: 100vh;
+  position: relative;
+}
+
+.nav-top,
+.nav-bottom {
+  background-color: #6b6b6b;
+  position: relative;
+}
+
+.nav-bottom {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  left: 20px;
+}
+
+.btn-circle {
+  color: white;
+  background-color: #6b6b6b;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.btn-circle:hover, .btn-circle:focus {
+  color: white;
+}
+
+.btn-circle-bottom {
+  border-radius: 50%;
+  bottom: -32px;
+}
+
+.btn-circle-top {
+  border-radius: 50%;
+  top: -32px;
+}
+
+.toolbox {
+  background-color: #6b6b6b;
+  color: white;
+}
+
+.toolbox .toolbox-btn {
+  color: white;
+  text-decoration: none;
+}
+
+.stroke {
+  width: 60px;
+  background-color: #e8e8e8;
+  outline: none;
+  border: none;
+}
+
+/*color radio select*/
+input[name="color"] {
+  display: none;
+}
+
+input[name="color"]:checked + label span {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  position: relative;
+}
+
+input[name="color"]:checked + label span::after {
+  content: "✓";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+input[name="color"]:checked + label .white {
+  border: 2px solid #bfbfbf;
+  color: gray;
+}
+
+input[name="color"]:checked + label .black {
+  border: 2px solid black;
+  color: black;
+}
+
+input[name="color"]:checked + label .light-blue {
+  border: 2px solid #1cff8d;
+  color: #009b4e;
+}
+
+input[name="color"]:checked + label .light-green {
+  border: 2px solid #004d39;
+  color: black;
+}
+
+input[name="color"]:checked + label .green {
+  border: 2px solid #00140f;
+  color: black;
+}
+
+label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+label:hover span {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+label span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+label span.white {
+  background: #ffffff;
+}
+
+label span.black {
+  background: #000000;
+}
+
+label span.light-blue {
+  background: #9bffcd;
+}
+
+label span.light-green {
+  background: #00cc99;
+}
+
+label span.green {
+  background: #01936f;
+}
+
+label span.colorall {
+  background: -webkit-gradient(linear, left top, right top, color-stop(3%, #79090d), color-stop(5%, #790944), color-stop(9%, #760979), color-stop(16%, #3a0979), color-stop(24%, #095379), color-stop(34%, #097976), color-stop(46%, #0b7909), color-stop(63%, #4f7909), color-stop(82%, #dab002), to(red));
+  background: linear-gradient(90deg, #79090d 3%, #790944 5%, #760979 9%, #3a0979 16%, #095379 24%, #097976 34%, #0b7909 46%, #4f7909 63%, #dab002 82%, red 100%);
+}
+
+.color-picker {
+  min-width: 50px;
+}
+/*# sourceMappingURL=style.css.map */

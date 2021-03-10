@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>畫板</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid  p-0">
+        <div class="nav-top ">
+            <div class="collapse show py-1" id="collapseTop">
+                <div class="card card-body toolbox-top toolbox border-0">
+                    <ul class="d-flex justify-content-around px-3 list-unstyled flex-wrap">
+                        <li><a href="#" download="draw.png" class="toolbox-btn save"><i
+                                    class="fas fa-save me-2"></i>SAVE</a></li>
+                        <li><a href="#" class="toolbox-btn clear"><i class="fas fa-expand me-2"></i> ClEAR All</a></li>
+                        <li><a href="#" class="toolbox-btn undo"><i class="fas fa-undo me-2"></i>UNDO</a></li>
+                        <li><a href="#" class="toolbox-btn redo"><i class="fas fa-redo me-2"></i>REDO</a></li>
+                        <li><a href="#" class="file-upload toolbox-btn"><i
+                                    class="fas fa-camera-retro me-2"></i>IMAGE</a>
+                            <input type="file" id="filetag" class="d-none"
+                                accept="image/gif,image/jpeg,image/jpg,image/png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="btn btn-circle btn-circle-bottom" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTop" aria-expanded="false" aria-controls="collapseTop">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+        <canvas class="canvas"> </canvas>
+
+        <div class="nav-bottom  rounded-pill">
+            <button class="btn btn-circle btn-circle-top" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseBottom" aria-expanded="false" aria-controls="collapseBottom">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="collapse show py-1" id="collapseBottom">
+                <div class="card card-body toolbox-bottom toolbox border-0 rounded-pill">
+                    <ul class="d-flex justify-content-around px-3 list-unstyled flex-wrap mb-0 align-items-center">
+                        <li class="my-2"><i class="fas fa-paint-brush me-2"></i>SIZE:<input type="number" min="1"
+                                max="30" class="rounded-pill stroke mx-2 text-center" value="10"> px
+                        </li>
+                        <ul class="my-2 d-flex justify-content-around px-3 list-unstyled flex-wrap align-items-center">
+                            <li><span class="me-2">COLOR:</span>
+                                <input type="radio" name="color" id="white" />
+                                <label for="white"><span class="white"></span></label>
+                            </li>
+                            <li>
+                                <input type="radio" name="color" id="black" />
+                                <label for="black"><span class="black"></span></label>
+                            </li>
+                            <li>
+                                <input type="radio" name="color" id="light-blue" />
+                                <label for="light-blue"><span class="light-blue"></span></label>
+                            </li>
+                            <li>
+                                <input type="radio" name="color" id="light-green" />
+                                <label for="light-green"><span class="light-green"></span></label>
+                            </li>
+                            <li>
+                                <input type="radio" name="color" id="green" />
+                                <label for="green"><span class="green"></span></label>
+                            </li>
+                            <li>
+                                <input type="radio" name="color" id="colorall" />
+                                <label for="colorall"><span class="colorall"></span></label>
+                            </li>
+
+                        </ul>
+                        <li>
+                            <div class="form-check form-switch d-flex align-items-center">
+                                <input class="form-check-input me-2" type="checkbox" id="setcolor">
+                                <span class="me-2">MORE:</span>
+                                <input type="color" name="colorset" id="colorset"
+                                    class="form-control form-control-color color-picker">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="all.js"></script>
+</body>
+
+</html>
